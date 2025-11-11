@@ -105,6 +105,7 @@ export default function Contact() {
         <input
           type="date"
           name="preferredDate"
+          placeholder="Preferred Date"
           value={formData.preferredDate}
           onChange={handleChange}
           className="w-full max-w-full min-w-0 appearance-none border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent bg-white"
