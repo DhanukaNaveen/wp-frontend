@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 import toast from "react-hot-toast";
 
-const API_BASE_URL = "http://localhost:5000"; 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const AuthContext = createContext();
 
