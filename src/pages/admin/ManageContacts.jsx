@@ -65,7 +65,7 @@ export default function ManageContacts() {
   }
 
   return (
-    <div className="w-full py-10">
+    <div className="w-full ">
       <h2 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-2">📬 Contact Inquiries</h2>
       {loading ? (
         <p className="text-center py-10">Loading inquiries...</p>

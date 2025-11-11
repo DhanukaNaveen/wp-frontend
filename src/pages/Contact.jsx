@@ -53,95 +53,94 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-full px-4 md:px-8 py-5 md:py-16 bg-white text-gray-800  mx-auto">
+    <div className="w-full px-4 md:px-8 py-5 md:py-16 bg-white text-gray-800 mx-auto">
       <h1 className="text-4xl font-bold text-center mb-4 border-b pb-4">Let's Connect</h1>
       <p className="text-center text-gray-800 text-xl mb-12 max-w-2xl mx-auto">
         Planning a project? Tell me about your needs and vision. I usually respond within 24 hours.
       </p>
 
       <form
-  onSubmit={handleSubmit}
-  className="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 bg-gray-50 px-3 md:px-8 py-8 rounded-xl shadow-lg"
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Full Name"
-    value={formData.name}
-    onChange={handleChange}
-    required
-    className="w-full border border-gray-300 rounded-lg px-6 py-4 text-lg focus:border-accent focus:ring-1 focus:ring-accent"
-  />
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email Address"
-    value={formData.email}
-    onChange={handleChange}
-    required
-    className="w-full border border-gray-300 rounded-lg px-6 py-4 text-lg focus:border-accent focus:ring-1 focus:ring-accent"
-  />
-  <input
-    type="tel"
-    name="phone"
-    placeholder="Phone Number (optional)"
-    value={formData.phone}
-    onChange={handleChange}
-    className="w-full border border-gray-300 rounded-lg px-6 py-4 text-lg focus:border-accent focus:ring-1 focus:ring-accent"
-  />
-  <select
-    name="shootType"
-    value={formData.shootType}
-    onChange={handleChange}
-    className="w-full border border-gray-300 rounded-lg px-6 py-4 text-lg focus:border-accent focus:ring-1 focus:ring-accent bg-white"
-  >
-    <option value="" disabled>Select Shoot Type</option>
-    <option value="wedding">Wedding / Elopement</option>
-    <option value="portrait">Personal / Corporate Portrait</option>
-    <option value="event">Event / Commercial</option>
-    <option value="travel">Travel / Editorial</option>
-    <option value="general">General Inquiry</option>
-  </select>
-  <input
-    type="date"
-    name="preferredDate"
-    value={formData.preferredDate}
-    onChange={handleChange}
-    className="w-full border border-gray-300 rounded-lg px-6 py-4 text-lg focus:border-accent focus:ring-1 focus:ring-accent bg-white"
-  />
-  <input
-    type="text"
-    name="budget"
-    placeholder="Estimated Budget (optional)"
-    value={formData.budget}
-    onChange={handleChange}
-    className="w-full border border-gray-300 rounded-lg px-6 py-4 text-lg focus:border-accent focus:ring-1 focus:ring-accent"
-  />
-  <textarea
-    name="message"
-    placeholder="Tell me about your project, location, and specific needs."
-    value={formData.message}
-    onChange={handleChange}
-    required
-    rows={6}
-    className="md:col-span-2 w-full border border-gray-300 rounded-lg px-6 py-4 text-lg resize-none focus:border-accent focus:ring-1 focus:ring-accent"
-  />
-  <button
-    type="submit"
-    disabled={loading}
-    className="md:col-span-2 bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-dark transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-  >
-    {loading ? (
-      <>
-        <span className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-        Sending...
-      </>
-    ) : (
-      "Send Inquiry"
-    )}
-  </button>
-</form>
-
+        onSubmit={handleSubmit}
+        className="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 px-4 md:px-8 py-8 rounded-xl shadow-lg"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Full Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email Address"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent"
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number (optional)"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent"
+        />
+        <select
+          name="shootType"
+          value={formData.shootType}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent bg-white"
+        >
+          <option value="" disabled>Select Shoot Type</option>
+          <option value="wedding">Wedding / Elopement</option>
+          <option value="portrait">Personal / Corporate Portrait</option>
+          <option value="event">Event / Commercial</option>
+          <option value="travel">Travel / Editorial</option>
+          <option value="general">General Inquiry</option>
+        </select>
+        <input
+          type="date"
+          name="preferredDate"
+          value={formData.preferredDate}
+          onChange={handleChange}
+          className="w-full max-w-full min-w-0 appearance-none border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent bg-white"
+        />
+        <input
+          type="text"
+          name="budget"
+          placeholder="Estimated Budget (optional)"
+          value={formData.budget}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:border-accent focus:ring-1 focus:ring-accent"
+        />
+        <textarea
+          name="message"
+          placeholder="Tell me about your project, location, and specific needs."
+          value={formData.message}
+          onChange={handleChange}
+          required
+          rows={6}
+          className="md:col-span-2 w-full border border-gray-300 rounded-lg px-4 py-3 text-base resize-none focus:border-accent focus:ring-1 focus:ring-accent"
+        />
+        <button
+          type="submit"
+          disabled={loading}
+          className="md:col-span-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold text-base hover:bg-accent-dark transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        >
+          {loading ? (
+            <>
+              <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              Sending...
+            </>
+          ) : (
+            "Send Inquiry"
+          )}
+        </button>
+      </form>
     </div>
   );
 }
